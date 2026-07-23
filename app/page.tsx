@@ -9,6 +9,8 @@ const skills = [
   "Laboratory techniques",
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const education = [
   {
     date: "2025 — Present",
@@ -69,7 +71,7 @@ export default function Home() {
           <a href="#work">Work</a>
           <a href="#contact">Contact</a>
         </div>
-        <a className="nav-cta" href="/documents/cristian-rivera-cv.pdf" target="_blank">
+        <a className="nav-cta" href={`${basePath}/documents/cristian-rivera-cv.pdf`} target="_blank">
           View CV ↗
         </a>
       </nav>
@@ -90,7 +92,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-photo">
-          <img src="/images/cristian-patagonia.jpg" alt="Cristian Rivera in Patagonia" />
+          <img src={`${basePath}/images/cristian-patagonia.jpg`} alt="Cristian Rivera in Patagonia" />
         </div>
       </section>
 
@@ -135,7 +137,7 @@ export default function Home() {
         </div>
         <div className="experience-card">
           <div className="organization-block">
-            <img src="/images/sasson-logo.png" alt="Sasson" />
+            <img src={`${basePath}/images/sasson-logo.png`} alt="Sasson" />
             <p className="date">Dec 2024 — Feb 2025</p>
             <h3>Project Management & Marketing Intern</h3>
             <p className="place">Sasson</p>
@@ -151,7 +153,7 @@ export default function Home() {
             <article key={item.title + item.date}>
               <div className={`education-mark ${item.visual}`}>
                 {item.visual === "klf" ? (
-                  <img src="/images/klf-logo.png" alt="KLF" />
+                  <img src={`${basePath}/images/klf-logo.png`} alt="KLF" />
                 ) : (
                   <span>TEC</span>
                 )}
@@ -172,7 +174,7 @@ export default function Home() {
         <div className="skills-grid">
           <div>
             <p className="large-statement">Technical and professional skills</p>
-            <a className="button outline" href="/documents/cristian-rivera-cv.pdf" target="_blank">
+            <a className="button outline" href={`${basePath}/documents/cristian-rivera-cv.pdf`} target="_blank">
               Download full CV <span>↓</span>
             </a>
           </div>
@@ -208,7 +210,7 @@ export default function Home() {
               key={project.title}
             >
               {project.accent === "violet" && (
-                <img className="project-logo" src="/images/bono2-logo.png" alt="Bono2" />
+                <img className="project-logo" src={`${basePath}/images/bono2-logo.png`} alt="Bono2" />
               )}
               <div className="project-top">
                 <span>{project.number}</span>
@@ -222,7 +224,7 @@ export default function Home() {
           ))}
         </div>
         <div className="award">
-          <img src="/images/ecohack-award.png" alt="Ecohack Bono2 second place certificate" />
+          <img src={`${basePath}/images/ecohack-award.png`} alt="Ecohack Bono2 second place certificate" />
           <div>
             <p className="eyebrow"><span /> Recognition</p>
             <h3>Second place at Ecohack Bono₂</h3>
