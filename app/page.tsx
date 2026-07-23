@@ -116,10 +116,9 @@ export default function Home() {
                 <span>English <b>C1</b></span>
                 <span>French <b>B2–C1</b></span>
               </div>
-              <img
-                src="/images/paris-exchange.jpg"
-                alt="Eiffel Tower in Paris, representing Cristian's international experience"
-              />
+              <div className="speaking-mark" aria-label="Multilingual communication">
+                🗣️
+              </div>
             </div>
           </div>
         </div>

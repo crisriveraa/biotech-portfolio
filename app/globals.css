@@ -95,7 +95,7 @@ img { display: block; max-width: 100%; }
 .languages { display: grid; gap: .7rem; align-content: center; }
 .languages span { display: flex; justify-content: space-between; font-size: .82rem; }
 .languages b { color: var(--ink); }
-.language-panel > img { width: 120px; height: 150px; object-fit: cover; object-position: center; }
+.speaking-mark { width: 120px; min-height: 120px; display: grid; place-items: center; background: var(--blue); font-size: 3rem; }
 
 .journey { background: var(--green); color: white; }
 .section-label.light { border-color: rgba(255,255,255,.25); }
