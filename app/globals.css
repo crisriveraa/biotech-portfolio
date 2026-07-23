@@ -91,11 +91,11 @@ img { display: block; max-width: 100%; }
 .about h2 { font-size: clamp(2.9rem, 5.6vw, 6rem); margin: 0; }
 .about-copy { align-self: end; font-size: 1.08rem; color: #3d4d47; }
 .about-copy p { margin: 0 0 1.4rem; }
-.languages { border-top: 1px solid var(--line); margin-top: 2.4rem; padding-top: 1.2rem; display: grid; gap: .7rem; }
+.language-panel { border-top: 1px solid var(--line); margin-top: 2.4rem; padding-top: 1.2rem; display: grid; grid-template-columns: 1fr 120px; gap: 1.4rem; align-items: stretch; }
+.languages { display: grid; gap: .7rem; align-content: center; }
 .languages span { display: flex; justify-content: space-between; font-size: .82rem; }
 .languages b { color: var(--ink); }
-.landscape { position: relative; margin: 0 0 0 auto; width: 68%; height: min(40vw, 430px); overflow: hidden; }
-.landscape img { width: 100%; height: 100%; object-fit: cover; object-position: center 48%; }
+.language-panel > img { width: 120px; height: 150px; object-fit: cover; object-position: center; }
 
 .journey { background: var(--green); color: white; }
 .section-label.light { border-color: rgba(255,255,255,.25); }
@@ -168,7 +168,6 @@ footer h2 { font-size: clamp(4rem, 9vw, 9.5rem); margin: 2rem 0 4rem; }
   .section { padding: 6rem 7vw; }
   .about-grid, .journey-heading, .work-heading, .skills-grid { grid-template-columns: 1fr; gap: 3rem; }
   .about-grid { padding: 3.5rem 0; }
-  .landscape { width: 100%; height: 480px; }
   .experience-card, .education-list article { grid-template-columns: 1fr; gap: 1rem; }
   .education-list article { align-items: start; }
   .projects, .award { grid-template-columns: 1fr; }

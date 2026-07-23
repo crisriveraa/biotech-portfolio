@@ -110,16 +110,19 @@ export default function Home() {
               opportunities where I can keep learning and contribute to
               multidisciplinary teams.
             </p>
-            <div className="languages">
-              <span>Spanish <b>Native</b></span>
-              <span>English <b>C1</b></span>
-              <span>French <b>B2–C1</b></span>
+            <div className="language-panel">
+              <div className="languages">
+                <span>Spanish <b>Native</b></span>
+                <span>English <b>C1</b></span>
+                <span>French <b>B2–C1</b></span>
+              </div>
+              <img
+                src="/images/paris-exchange.jpg"
+                alt="Eiffel Tower in Paris, representing Cristian's international experience"
+              />
             </div>
           </div>
         </div>
-        <figure className="landscape">
-          <img src="/images/cristian-forest.jpg" alt="Cristian sitting in a green landscape" />
-        </figure>
       </section>
 
       <section className="journey section" id="experience">
