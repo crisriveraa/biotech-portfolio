@@ -15,18 +15,21 @@ const education = [
     title: "B.Eng. in Biotechnology",
     place: "Tecnológico de Monterrey",
     detail: "Current GPA: 95/100",
+    visual: "tec",
   },
   {
     date: "Jan — May 2023",
     title: "International Exchange",
     place: "École KLF · Montpellier, France",
     detail: "An immersive academic and cultural experience.",
+    visual: "klf",
   },
   {
     date: "2021 — 2024",
     title: "High School",
     place: "Tecnológico de Monterrey",
     detail: "Multicultural academic program.",
+    visual: "tec",
   },
 ];
 
@@ -74,11 +77,12 @@ export default function Home() {
       <section className="hero" id="home">
         <div className="hero-copy">
           <p className="eyebrow"><span /> Mexico City · Open to opportunities</p>
-          <h1>Science, technology<br />and a curious mind.</h1>
+          <h1>Cristian<br />Rivera Ávila</h1>
+          <p className="hero-role">Biotechnology Engineering Student</p>
           <p className="hero-intro">
-            I&apos;m <strong>Cristian Rivera Ávila</strong>, a Biotechnology Engineering
-            student exploring how science, data and digital products can create
-            meaningful change.
+            Tecnológico de Monterrey student interested in biotechnology,
+            programming, sustainability and the development of practical
+            technology-driven solutions.
           </p>
           <div className="hero-actions">
             <a className="button primary" href="#work">Explore my work <span>↓</span></a>
@@ -87,29 +91,24 @@ export default function Home() {
         </div>
         <div className="hero-photo">
           <img src="/images/cristian-patagonia.jpg" alt="Cristian Rivera in Patagonia" />
-          <div className="photo-tag">
-            <span>Currently</span>
-            <strong>Learning without borders</strong>
-          </div>
         </div>
-        <p className="side-note">BIOTECHNOLOGY · DATA · SUSTAINABILITY</p>
       </section>
 
       <section className="about section" id="about">
         <div className="section-label"><span>01</span> About me</div>
         <div className="about-grid">
-          <h2>I&apos;m interested in the places where different worlds meet.</h2>
+          <h2>About me</h2>
           <div className="about-copy">
             <p>
-              Biology meets computation. Research meets communication. Curiosity
-              becomes something useful. I am building an interdisciplinary path
-              through biotechnology while developing skills in programming,
-              project management and scientific storytelling.
+              I am a Biotechnology Engineering student at Tecnológico de
+              Monterrey with experience in project management, programming and
+              digital product development.
             </p>
             <p>
-              I am open to opportunities across biotechnology, sustainability,
-              research and technology—especially those that invite me to learn,
-              collaborate and turn complex ideas into real-world impact.
+              My interests include scientific research, data analysis,
+              sustainability and technology. I am open to different
+              opportunities where I can keep learning and contribute to
+              multidisciplinary teams.
             </p>
             <div className="languages">
               <span>Spanish <b>Native</b></span>
@@ -120,21 +119,21 @@ export default function Home() {
         </div>
         <figure className="landscape">
           <img src="/images/cristian-forest.jpg" alt="Cristian sitting in a green landscape" />
-          <figcaption>Curiosity is my starting point.</figcaption>
         </figure>
       </section>
 
       <section className="journey section" id="experience">
         <div className="section-label light"><span>02</span> Education & experience</div>
         <div className="journey-heading">
-          <h2>Still learning.<br />Already building.</h2>
+          <h2>Education &<br />experience</h2>
           <p>
             My academic path is complemented by hands-on work in project
             coordination, data, communication and sustainable innovation.
           </p>
         </div>
         <div className="experience-card">
-          <div>
+          <div className="organization-block">
+            <img src="/images/sasson-logo.png" alt="Sasson" />
             <p className="date">Dec 2024 — Feb 2025</p>
             <h3>Project Management & Marketing Intern</h3>
             <p className="place">Sasson</p>
@@ -148,6 +147,13 @@ export default function Home() {
         <div className="education-list">
           {education.map((item) => (
             <article key={item.title + item.date}>
+              <div className={`education-mark ${item.visual}`}>
+                {item.visual === "klf" ? (
+                  <img src="/images/klf-logo.png" alt="KLF" />
+                ) : (
+                  <span>TEC</span>
+                )}
+              </div>
               <p className="date">{item.date}</p>
               <div>
                 <h3>{item.title}</h3>
@@ -163,9 +169,7 @@ export default function Home() {
         <div className="section-label"><span>03</span> Skills & approach</div>
         <div className="skills-grid">
           <div>
-            <p className="large-statement">
-              I bring a scientific mindset to creative and technical challenges.
-            </p>
+            <p className="large-statement">Technical and professional skills</p>
             <a className="button outline" href="/documents/cristian-rivera-cv.pdf" target="_blank">
               Download full CV <span>↓</span>
             </a>
@@ -186,7 +190,7 @@ export default function Home() {
       <section className="work section" id="work">
         <div className="section-label"><span>04</span> Articles & projects</div>
         <div className="work-heading">
-          <h2>A growing archive<br />of things I&apos;ve made.</h2>
+          <h2>Articles &<br />projects</h2>
           <p>
             Research, code and communication brought together in projects that
             explain ideas or solve practical problems.
@@ -201,6 +205,9 @@ export default function Home() {
               rel="noreferrer"
               key={project.title}
             >
+              {project.accent === "violet" && (
+                <img className="project-logo" src="/images/bono2-logo.png" alt="Bono2" />
+              )}
               <div className="project-top">
                 <span>{project.number}</span>
                 <span>↗</span>
@@ -226,11 +233,16 @@ export default function Home() {
       </section>
 
       <footer id="contact">
-        <p className="footer-kicker">Have an idea, opportunity or question?</p>
-        <h2>Let&apos;s make<br />something meaningful.</h2>
+        <p className="footer-kicker">Cristian Rivera Ávila</p>
+        <h2>Contact</h2>
         <a className="email" href="mailto:cristiandanel08@gmail.com">
           cristiandanel08@gmail.com <span>↗</span>
         </a>
+        <div className="contact-links">
+          <a href="tel:+525568943127">+52 55 6894 3127</a>
+          <a href="https://github.com/crisriveraa" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/cristian-rivera-avila-6b712a327" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
         <div className="footer-bottom">
           <p>© 2026 Cristian Rivera Ávila</p>
           <p>Mexico City, Mexico</p>
